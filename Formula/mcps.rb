@@ -20,7 +20,7 @@ class Mcps < Formula
       {"mcpServers": {"demo": {"command": "demo-mcp"}}}
     JSON
     with_env(HOME: testpath.to_s) do
-      assert_match "demo-mcp", shell_output("#{bin}/mcps")
+      assert_match "demo-mcp", shell_output(bin/"mcps")
     end
   end
 end
